@@ -1,96 +1,458 @@
+Configuration loaded successfully.
 
-##### Testing Single-Shot Mode #####
 
-=== New Episode ===
-Prompt: Find academic papers on reinforcement learning.
-Available Tools: ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']
+=== Testing environment with editeddataset.csv ===
+Loaded dataset with 20614 rows, vocab size=582
+Ground truth tools: ['Summarize.tech', 'Notta', 'Eightify']
+Initial Observation: {'prompt': 'I would like a comprehensive explanation of the underlying concepts and principles discussed in this specific YouTube video on machine learning.', 'available_tools': ['16Personalities', 'ABCmouse', 'AI2sql', 'AbleStyle', 'AccuWeather', 'Acorns', 'Acuity Scheduling', 'Adalo', 'Adobe Acrobat', 'Adobe Photoshop', 'Adobe Scan', 'Agones', 'Ahrefs', 'AirVisual', 'Al-Islam.org', 'Alexa', 'Algorithma', 'Allrecipes', 'Amazon', 'Amazon Gift Finder', 'Anki', 'Ansible', 'Apartments.com', 'ApexMap', 'Apify', 'Apollo.io', 'Apple Maps', 'Apple Music', 'Apple News', 'Apple Podcasts', 'AppyPieAIAppBuilder', 'Archive.today', 'ArtCollection', 'Artland', 'Artsy', 'Astro.com', 'AusPetrolPrices', 'AusSurfReport', 'AutoInfra1', 'BBC News', 'Backblaze', 'Bannerbear', 'Bear', 'Beautiful Soup', 'Betterment', 'Biddy Tarot', 'Bing', 'Bing Images', 'Bitbucket', 'Bitly', 'Blockchair', 'Blockcypher', 'Bloomberg', 'Bloomberg Terminal', 'Bohita', 'BookBub', 'BookTool', 'Brandfolder', 'Brandmark', 'Brandwatch', 'BreezoMeter', 'British Council IELTS', 'Broadway', 'Broadway.com', 'Bubble', 'Burp Suite', 'C3_Glide', 'CTCP', 'Calendly', 'CamelCamelCamel', 'Canva', 'Capital One Shopping', 'Capterra', 'CarYardBard', 'Carrot Weather', 'ChargePoint', 'Charity Navigator', 'CharityTool', 'ChartTool', 'ChatOCR', 'Checkers', 'Checkersland', 'Chess', 'Chess.com', 'Cisco Umbrella', 'ClinicalTrials.gov', 'Cloudflare', 'Clutch', 'Co-Star', 'Coastalwatch', 'Coaster-Net', 'Code.org', 'CodeWhisperer', 'CompanyInfoTool', 'Connected Papers', 'Copy.ai', 'CountWordsFree.com', 'CourseTool', 'Coursera', 'Co\x96Star', 'CranePumpsManuals', 'Creaticode_Extension_of_MIT_Scratch', 'Credit Karma', 'Credit Sesame', 'CreditYelp', 'CribbageScorer', 'Cronometer', 'Crunchbase', 'DALL-E 2', 'DataRetrievalTool', 'Daybook', 'DeepL', 'Descript', 'Dev.to', 'DietTool', 'Discord', 'Discount', 'Docker', 'Dogpile', 'Dr_Thoths_Tarot', 'Draft Fantasy Football', 'Dropbox', 'DuckDuckGo', 'Duolingo', 'ESA', 'ESPN', 'ESPN API', 'EarthquakeTool', 'Eightify', 'Electrify America', 'ElevenLabs', 'Elicit', 'EmailByNylas', 'Epic Games', 'Etherscan', 'Etsy', 'Evernote', 'ExchangeTool', 'Expedia', 'Experian', 'FPL Manager', 'Fabulous', 'Fastcase', 'Feedly', 'Fender Play', 'Figlet', 'FinanceTool', 'Finviz', 'Florish', 'Flutter', "Fodor's", 'Food Network', 'Foursquare', 'Foxit PDF Editor', 'FuelWatch', 'G2', 'GIMP', 'GOG', 'GTmetrix', 'GameTool', 'GasBuddy', 'Gear Patrol', 'GifApi', 'GiftTool', 'Giphy', 'Git', 'GitHub', 'GitHub Actions', 'GitHub Copilot', 'GitLab', 'GitLab CI/CD', 'GiveWell', 'Glassdoor', 'Glowing', 'Golden Thread Tarot', 'Goodreads', 'Google', 'Google Analytics', 'Google Assistant', 'Google Data Studio', 'Google Forms', 'Google Images', 'Google Lens', 'Google Maps', 'Google News', 'Google Scholar', 'Google Sheets', 'Google Shopping', 'Google Translate', 'Google_Ads_Shopping_Microsoft_Ads_pay_per_click', 'Grammarly', 'GuideStar', 'GuitarTuna', 'H&R Block', 'Habitica', 'Hadith Collection', 'Hemingway Editor', 'Homer', 'Honey', 'Hootsuite', 'Horoscopes_by_Inner_Self', 'HousePurchasingTool', 'HouseRentingTool', 'HubSpot', 'Hudl', 'Hypebeast', 'IELTS.org', 'IFTTT', 'IMDb', 'IQAir', 'Idealo', 'ImageSearch', 'Imgflip', 'InVideo', 'Indeed', 'IndoorPlants', 'Insomnia', 'Interact', 'JPL NASA', 'Jasper', 'Jenkins', 'JobTool', 'Jotform', 'Jupyter Notebooks', 'JustWatch', 'KakaoMap', 'KalendarAI', 'Kapwing', 'Kayak', 'Kickresume', 'Kubernetes', 'Labyrinthos', 'LarkBaseImporter', 'LastQuake', 'Later', 'LawTool', 'LeadIQ', 'LexisNexis', 'Lichess', 'LinkedIn', 'Loadsmart', 'Lonely Planet', 'Looka', 'Lose It!', 'Lumen5', 'M1 Finance', 'Magnetis', 'Magoosh IELTS', 'Mailgun', 'Make', 'Make (formerly Integromat)', 'Man_of_Many', 'MapTool', 'MediaModifyTool', 'MediaTool', 'Medidata Rave', 'MemeTool', 'MemoryTool', 'Memrise', 'Mention', 'Microsoft Excel', 'Microsoft Office Lens', 'Microsoft Teams', 'Microsoft Word', 'Midjourney', 'Mint', 'MixerBox_Translate_AI_language_tutor', 'MixerBox_WebSearchG_web_search', 'MobaXterm', 'MonkeyLearn', 'Morningstar', 'MotorMouth', 'Moz', 'Murf AI', 'MusicTool', 'MyFitnessPal', 'MyShake', 'MyWritingCompanion', 'NASATool', 'NFL Game Pass', 'NLQ.ai', 'NaturalReader', 'Naver Maps', 'Nessus', 'NewsTool', 'Nike Training Club', 'NotesTool', 'Notion', 'Notta', 'Now', 'Octoparse', 'Odoo', 'OneNote', 'OpenShift', 'OpenTable', 'OpenVAS', 'Oracle', 'Outreach', 'PDF&URLTool', 'PDF_Exporter', 'PDFelement', 'Paraphraser.io', 'Paw', 'PayPal', 'Personal Capital', 'Pexels', 'PictureThis', 'Pingdom', 'PitchBook', 'Pixton', 'Planfit', 'PlantSnap', 'PlugShare', 'Pocket Casts', 'PodcastTool', 'PolishTool', 'Postman', 'Postmark', 'Power BI', 'PriceGrabber', 'ProWritingAid', 'ProductComparison', 'ProductSearch', 'PuTTY', 'Pulumi', 'Puzzle_Constructor', 'QR Code Generator', 'QR Code Monkey', 'QuillBot', 'QuiverQuantitative', 'Quizlet', 'Rakuten', 'React Native', 'ReadSpeaker', 'Reading Eggs', 'Realtor.com', 'Rebrandly', 'Redfin', 'RepoTool', 'ResearchFinder', 'ResearchHelper', 'ResearchRabbit', 'Resemble.ai', 'RestaurantBookingTool', 'ResumeTool', 'Resy', 'Review', 'RoboAd', 'Rotten Tomatoes', 'Rytr', 'SAP', 'SASpeedCameras', 'SEMrush', 'SEOTool', 'SQLizer', 'SSH', 'Saatchi Art', 'Salesforce', 'Salesloft', 'Sanctuary', 'SavvyCal', 'SceneXplain', 'SciSpace', 'Scout Gaming', 'Scrapy', 'Scratch', 'SearXNG', 'SeekWell', 'Selenium', 'Semantic Scholar', 'SendGrid', 'Seoul Subway app', 'Shiply', 'ShopSavvy', 'ShoppingAssistant', 'SigFig', 'Siri', 'SkySafari', 'Skyscanner', 'Slack', 'Sportradar', 'Spotify', 'Sprout Social', 'SpyFu', 'Squarespace', 'Stable Diffusion', 'Stack Overflow', 'Star Walk 2', 'Starfall', 'Startpage', 'Steam', 'Stellarium', 'Stencil', 'StoryGraph', 'StoryJumper', 'Strava', 'Streaks', 'StrologyTool', 'Substack_IQ', 'Sudoku', 'Summarize.tech', 'SummarizeAnything_pr', 'Sunnah.com', 'SuperchargeMyEV', 'Surfer SEO', 'Surfline', 'SurveyMonkey', 'Swellnet', 'Synthesia', 'TKTS', 'Tableau', 'Tabnine', 'TalentOrg', 'Talkface_IELTS_Prep', 'TaxAct', 'Tax_Calculator', 'Tenor', 'Termius', 'Terraform', 'The Economist', 'The Guardian', 'The Pattern', 'The Planetary Society', 'The Sports API', 'The Weather Channel', 'Thumbtack', 'Thunkable', 'TicTacToe', 'TinyURL', 'TodayTix', 'TomTom', 'TouringPlans', 'TradingView', 'Tray.io', 'TrialSpark', 'TripAdviceTool', 'TripAdvisor', 'TripTool', 'Truity', 'Trulia', 'Trustpilot', 'TurboTax', 'Tynker', 'TypeFinder', 'Typeform', 'URLTool', 'USGS Earthquake App', 'Udemy', 'Uncommon Goods', 'Uncrate', 'Undercover Tourist', 'Unitag', 'Upwork', 'VideoSummarizeTool', 'Visla', 'Voyant Tools', 'Wayback Machine', 'Waze', 'Wealthfront', 'WeatherTool', 'WebRewind', 'WebsiteTool', 'Westlaw', 'Wise', 'Wix', 'WolframAlpha', 'WordArt', 'WordCloud', 'WordCounter.net', 'WordPress', 'Wordtune', 'WriteReader', 'XE', 'Xamarin', 'YNAB', 'Yahoo Finance', 'Yelp', 'YouTube Music', 'Yousician', 'Yummly', 'Zapier', 'Zety', 'Zillow', 'Zoho CRM', 'ZoomInfo', 'abc_to_audio', 'ad4mat', 'aiAgents', 'ai_council', 'airqualityforeast', 'assetOvi', 'blockatlas', 'bramework', 'brandfetch', 'buildbetter', 'calculator', 'champdex', 'chat_with_workspace', 'chatspot', 'clearbit_integration', 'clinical_trial_radar', 'clinq', 'cloudflare_radar', 'competitorppcads', 'copilot', 'copywriter', 'crafty_clues', 'create_qr_code', 'dart', 'decision_journal', 'deployscript', 'dev', 'diceroller', 'dover_outreach', 'edX', 'exportchat', 'find_agency', 'form', 'fundsdbsearch', 'hackit_web_scanner', 'hacktrack', 'hadith', 'haulingbuddies', 'hdbcarpark', 'heygen', 'hubbubworld_hubbub_1', 'iSpionage', 'internetSearch', 'jini', 'keyplays_football', 'keywordexplorer', 'korea_subway', 'kraftful', 'lichess.org', 'local', 'locator', 'lsongai', 'magi_codex', 'mbti', 'metaphor_search_api', 'mini_habits', 'ndricks_sports_api', 'noteable', 'ph_ai_news_query', 'photorealistic', 'placid', 'portfoliopilot', 'qreator', 'recipe_retrieval', 'reflect_notes', 'rephrase', 'sakenowa', 'search', 'seoanalysis', 'shimmer_daily', 'smarttsicketsai', 'social_media_muse', 'socialsearch', 'speak', 'speechki_tts_plugin', 'stellarexplorer', 'storybird_stories', 'tailor_erp', 'talkfpl', 'themeparkhipster', 'timemachine', 'timeport', 'tira', 'total_query_meta_search_engine', 'uShip', 'uberchord', 'uk_politics', 'universal', 'video_highlight', 'web_requests', 'web_scraper', 'webhooks', 'website_performance_insights', 'what_to_watch', 'word_counter', 'word_sneak', 'wpinteract', 'DONE'], 'selected_tools': []}
+Step 1: Action=Apollo.io Reward=0.0 Done=False
+Step 2: Action=NaturalReader Reward=0.0 Done=False
+Step 3: Action=Make (formerly Integromat) Reward=0.0 Done=False
+Step 4: Action=Kayak Reward=0.0 Done=False
+Step 5: Action=Fastcase Reward=0.0 Done=False
+Step 6: Action=CreditYelp Reward=0.0 Done=False
+Step 7: Action=speak Reward=0.0 Done=False
+Step 8: Action=Coastalwatch Reward=0.0 Done=False
+Step 9: Action=TradingView Reward=0.0 Done=False
+Step 10: Action=ArtCollection Reward=0.0 Done=False
+Step 11: Action=AppyPieAIAppBuilder Reward=0.0 Done=False
+Step 12: Action=Copy.ai Reward=0.0 Done=False
+Step 13: Action=Jupyter Notebooks Reward=0.0 Done=False
+Step 14: Action=Lichess Reward=0.0 Done=False
+Step 15: Action=form Reward=0.0 Done=False
+Step 16: Action=Apple Music Reward=0.0 Done=False
+Step 17: Action=web_requests Reward=0.0 Done=False
+Step 18: Action=HubSpot Reward=0.0 Done=False
+Step 19: Action=speak Reward=0.0 Done=False
+Step 20: Action=TodayTix Reward=0.0 Done=False
+Step 21: Action=KakaoMap Reward=0.0 Done=False
+Step 22: Action=WeatherTool Reward=0.0 Done=False
+Step 23: Action=NewsTool Reward=0.0 Done=False
+Step 24: Action=Acuity Scheduling Reward=0.0 Done=False
+Step 25: Action=GiftTool Reward=0.0 Done=False
+Step 26: Action=TradingView Reward=0.0 Done=False
+Step 27: Action=Rotten Tomatoes Reward=0.0 Done=False
+Step 28: Action=NewsTool Reward=0.0 Done=False
+Step 29: Action=GameTool Reward=0.0 Done=False
+Step 30: Action=Jenkins Reward=0.0 Done=False
+Step 31: Action=ResumeTool Reward=0.0 Done=False
+Step 32: Action=CreditYelp Reward=0.0 Done=False
+Step 33: Action=Connected Papers Reward=0.0 Done=False
+Step 34: Action=Startpage Reward=0.0 Done=False
+Step 35: Action=CoStar Reward=0.0 Done=False
+Step 36: Action=SeekWell Reward=0.0 Done=False
+Step 37: Action=SEMrush Reward=0.0 Done=False
+Step 38: Action=Morningstar Reward=0.0 Done=False
+Step 39: Action=Betterment Reward=0.0 Done=False
+Step 40: Action=Wordtune Reward=0.0 Done=False
+Step 41: Action=reflect_notes Reward=0.0 Done=False
+Step 42: Action=EarthquakeTool Reward=0.0 Done=False
+Step 43: Action=Star Walk 2 Reward=0.0 Done=False
+Step 44: Action=Checkers Reward=0.0 Done=False
+Step 45: Action=timemachine Reward=0.0 Done=False
+Step 46: Action=PDFelement Reward=0.0 Done=False
+Step 47: Action=SendGrid Reward=0.0 Done=False
+Step 48: Action=Hemingway Editor Reward=0.0 Done=False
+Step 49: Action=Capital One Shopping Reward=0.0 Done=False
+Step 50: Action=Bing Reward=0.0 Done=False
+Step 51: Action=LastQuake Reward=0.0 Done=False
+Step 52: Action=Oracle Reward=0.0 Done=False
+Step 53: Action=Checkersland Reward=0.0 Done=False
+Step 54: Action=Lichess Reward=0.0 Done=False
+Step 55: Action=Credit Sesame Reward=0.0 Done=False
+Step 56: Action=Startpage Reward=0.0 Done=False
+Step 57: Action=NewsTool Reward=0.0 Done=False
+Step 58: Action=Wix Reward=0.0 Done=False
+Step 59: Action=ShopSavvy Reward=0.0 Done=False
+Step 60: Action=GitHub Reward=0.0 Done=False
+Step 61: Action=Slack Reward=0.0 Done=False
+Step 62: Action=Scout Gaming Reward=0.0 Done=False
+Step 63: Action=Indeed Reward=0.0 Done=False
+Step 64: Action=Murf AI Reward=0.0 Done=False
+Step 65: Action=CarYardBard Reward=0.0 Done=False
+Step 66: Action=Goodreads Reward=0.0 Done=False
+Step 67: Action=portfoliopilot Reward=0.0 Done=False
+Step 68: Action=Make (formerly Integromat) Reward=0.0 Done=False
+Step 69: Action=GitHub Actions Reward=0.0 Done=False
+Step 70: Action=Xamarin Reward=0.0 Done=False
+Step 71: Action=Starfall Reward=0.0 Done=False
+Step 72: Action=MyShake Reward=0.0 Done=False
+Step 73: Action=uberchord Reward=0.0 Done=False
+Step 74: Action=JustWatch Reward=0.0 Done=False
+Step 75: Action=React Native Reward=0.0 Done=False
+Step 76: Action=Brandfolder Reward=0.0 Done=False
+Step 77: Action=Later Reward=0.0 Done=False
+Step 78: Action=ArtCollection Reward=0.0 Done=False
+Step 79: Action=PuTTY Reward=0.0 Done=False
+Step 80: Action=Tableau Reward=0.0 Done=False
+Step 81: Action=MusicTool Reward=0.0 Done=False
+Step 82: Action=CTCP Reward=0.0 Done=False
+Step 83: Action=Insomnia Reward=0.0 Done=False
+Step 84: Action=word_sneak Reward=0.0 Done=False
+Step 85: Action=ProductSearch Reward=0.0 Done=False
+Step 86: Action=Interact Reward=0.0 Done=False
+Step 87: Action=dev Reward=0.0 Done=False
+Step 88: Action=Surfline Reward=0.0 Done=False
+Step 89: Action=WordPress Reward=0.0 Done=False
+Step 90: Action=FinanceTool Reward=0.0 Done=False
+Step 91: Action=MotorMouth Reward=0.0 Done=False
+Step 92: Action=Fastcase Reward=0.0 Done=False
+Step 93: Action=MapTool Reward=0.0 Done=False
+Step 94: Action=web_requests Reward=0.0 Done=False
+Step 95: Action=sakenowa Reward=0.0 Done=False
+Step 96: Action=MonkeyLearn Reward=0.0 Done=False
+Step 97: Action=Truity Reward=0.0 Done=False
+Step 98: Action=Synthesia Reward=0.0 Done=False
+Step 99: Action=SendGrid Reward=0.0 Done=False
+Step 100: Action=JustWatch Reward=0.0 Done=False
+Step 101: Action=Fabulous Reward=0.0 Done=False
+Step 102: Action=hadith Reward=0.0 Done=False
+Step 103: Action=copywriter Reward=0.0 Done=False
+Step 104: Action=CompanyInfoTool Reward=0.0 Done=False
+Step 105: Action=Bitbucket Reward=0.0 Done=False
+Step 106: Action=Descript Reward=0.0 Done=False
+Step 107: Action=GIMP Reward=0.0 Done=False
+Step 108: Action=GiftTool Reward=0.0 Done=False
+Step 109: Action=TradingView Reward=0.0 Done=False
+Step 110: Action=Burp Suite Reward=0.0 Done=False
+Step 111: Action=StoryJumper Reward=0.0 Done=False
+Step 112: Action=Steam Reward=0.0 Done=False
+Step 113: Action=Yummly Reward=0.0 Done=False
+Step 114: Action=ndricks_sports_api Reward=0.0 Done=False
+Step 115: Action=MemoryTool Reward=0.0 Done=False
+Step 116: Action=timeport Reward=0.0 Done=False
+Step 117: Action=Agones Reward=0.0 Done=False
+Step 118: Action=Docker Reward=0.0 Done=False
+Step 119: Action=reflect_notes Reward=0.0 Done=False
+Step 120: Action=Murf AI Reward=0.0 Done=False
+Step 121: Action=Rotten Tomatoes Reward=0.0 Done=False
+Step 122: Action=DietTool Reward=0.0 Done=False
+Step 123: Action=PDFelement Reward=0.0 Done=False
+Step 124: Action=URLTool Reward=0.0 Done=False
+Step 125: Action=Gear Patrol Reward=0.0 Done=False
+Step 126: Action=Wix Reward=0.0 Done=False
+Step 127: Action=AbleStyle Reward=0.0 Done=False
+Step 128: Action=MonkeyLearn Reward=0.0 Done=False
+Step 129: Action=diceroller Reward=0.0 Done=False
+Step 130: Action=Google Lens Reward=0.0 Done=False
+Step 131: Action=hackit_web_scanner Reward=0.0 Done=False
+Step 132: Action=DALL-E 2 Reward=0.0 Done=False
+Step 133: Action=Pexels Reward=0.0 Done=False
+Step 134: Action=hackit_web_scanner Reward=0.0 Done=False
+Step 135: Action=HubSpot Reward=0.0 Done=False
+Step 136: Action=GIMP Reward=0.0 Done=False
+Step 137: Action=Sprout Social Reward=0.0 Done=False
+Step 138: Action=Git Reward=0.0 Done=False
+Step 139: Action=search Reward=0.0 Done=False
+Step 140: Action=ph_ai_news_query Reward=0.0 Done=False
+Step 141: Action=16Personalities Reward=0.0 Done=False
+Step 142: Action=Rakuten Reward=0.0 Done=False
+Step 143: Action=clinical_trial_radar Reward=0.0 Done=False
+Step 144: Action=Amazon Gift Finder Reward=0.0 Done=False
+Step 145: Action=DietTool Reward=0.0 Done=False
+Step 146: Action=Seoul Subway app Reward=0.0 Done=False
+Step 147: Action=PodcastTool Reward=0.0 Done=False
+Step 148: Action=M1 Finance Reward=0.0 Done=False
+Step 149: Action=Brandwatch Reward=0.0 Done=False
+Step 150: Action=Magnetis Reward=0.0 Done=False
+Step 151: Action=word_sneak Reward=0.0 Done=False
+Step 152: Action=Checkers Reward=0.0 Done=False
+Step 153: Action=Clutch Reward=0.0 Done=False
+Step 154: Action=chat_with_workspace Reward=0.0 Done=False
+Step 155: Action=Canva Reward=0.0 Done=False
+Step 156: Action=placid Reward=0.0 Done=False
+Step 157: Action=Eightify Reward=1.0 Done=False
+Step 158: Action=Elicit Reward=0.0 Done=False
+Step 159: Action=ad4mat Reward=0.0 Done=False
+Step 160: Action=tailor_erp Reward=0.0 Done=False
+Step 161: Action=GitLab Reward=0.0 Done=False
+Step 162: Action=MotorMouth Reward=0.0 Done=False
+Step 163: Action=mini_habits Reward=0.0 Done=False
+Step 164: Action=Tray.io Reward=0.0 Done=False
+Step 165: Action=Insomnia Reward=0.0 Done=False
+Step 166: Action=search Reward=0.0 Done=False
+Step 167: Action=Hypebeast Reward=0.0 Done=False
+Step 168: Action=PriceGrabber Reward=0.0 Done=False
+Step 169: Action=Synthesia Reward=0.0 Done=False
+Step 170: Action=Sprout Social Reward=0.0 Done=False
+Step 171: Action=Uncommon Goods Reward=0.0 Done=False
+Step 172: Action=keyplays_football Reward=0.0 Done=False
+Step 173: Action=Westlaw Reward=0.0 Done=False
+Step 174: Action=Duolingo Reward=0.0 Done=False
+Step 175: Action=MediaModifyTool Reward=0.0 Done=False
+Step 176: Action=Kubernetes Reward=0.0 Done=False
+Step 177: Action=Burp Suite Reward=0.0 Done=False
+Step 178: Action=Review Reward=0.0 Done=False
+Step 179: Action=Ansible Reward=0.0 Done=False
+Step 180: Action=tira Reward=0.0 Done=False
+Step 181: Action=LawTool Reward=0.0 Done=False
+Step 182: Action=KakaoMap Reward=0.0 Done=False
+Step 183: Action=Adalo Reward=0.0 Done=False
+Step 184: Action=Capterra Reward=0.0 Done=False
+Step 185: Action=BreezoMeter Reward=0.0 Done=False
+Step 186: Action=Later Reward=0.0 Done=False
+Step 187: Action=CamelCamelCamel Reward=0.0 Done=False
+Step 188: Action=ArtCollection Reward=0.0 Done=False
+Step 189: Action=RepoTool Reward=0.0 Done=False
+Step 190: Action=Capterra Reward=0.0 Done=False
+Step 191: Action=iSpionage Reward=0.0 Done=False
+Step 192: Action=Lose It! Reward=0.0 Done=False
+Step 193: Action=Nike Training Club Reward=0.0 Done=False
+Step 194: Action=chat_with_workspace Reward=0.0 Done=False
+Step 195: Action=Jasper Reward=0.0 Done=False
+Step 196: Action=search Reward=0.0 Done=False
+Step 197: Action=Etsy Reward=0.0 Done=False
+Step 198: Action=ZoomInfo Reward=0.0 Done=False
+Step 199: Action=Mailgun Reward=0.0 Done=False
+Step 200: Action=ZoomInfo Reward=0.0 Done=False
+Step 201: Action=Tenor Reward=0.0 Done=False
+Step 202: Action=Habitica Reward=0.0 Done=False
+Step 203: Action=CountWordsFree.com Reward=0.0 Done=False
+Step 204: Action=CoStar Reward=0.0 Done=False
+Step 205: Action=TurboTax Reward=0.0 Done=False
+Step 206: Action=SciSpace Reward=0.0 Done=False
+Step 207: Action=Tray.io Reward=0.0 Done=False
+Step 208: Action=The Guardian Reward=0.0 Done=False
+Step 209: Action=Yousician Reward=0.0 Done=False
+Step 210: Action=BookBub Reward=0.0 Done=False
+Step 211: Action=CranePumpsManuals Reward=0.0 Done=False
+Step 212: Action=Broadway Reward=0.0 Done=False
+Step 213: Action=TalentOrg Reward=0.0 Done=False
+Step 214: Action=RoboAd Reward=0.0 Done=False
+Step 215: Action=DeepL Reward=0.0 Done=False
+Step 216: Action=MediaTool Reward=0.0 Done=False
+Step 217: Action=Hemingway Editor Reward=0.0 Done=False
+Step 218: Action=Habitica Reward=0.0 Done=False
+Step 219: Action=reflect_notes Reward=0.0 Done=False
+Step 220: Action=WeatherTool Reward=0.0 Done=False
+Step 221: Action=Feedly Reward=0.0 Done=False
+Step 222: Action=TradingView Reward=0.0 Done=False
+Step 223: Action=Google Shopping Reward=0.0 Done=False
+Step 224: Action=Nike Training Club Reward=0.0 Done=False
+Step 225: Action=Xamarin Reward=0.0 Done=False
+Step 226: Action=Medidata Rave Reward=0.0 Done=False
+Step 227: Action=CharityTool Reward=0.0 Done=False
+Step 228: Action=VideoSummarizeTool Reward=0.0 Done=False
+Step 229: Action=talkfpl Reward=0.0 Done=False
+Step 230: Action=CranePumpsManuals Reward=0.0 Done=False
+Step 231: Action=Blockcypher Reward=0.0 Done=False
+Step 232: Action=seoanalysis Reward=0.0 Done=False
+Step 233: Action=Alexa Reward=0.0 Done=False
+Step 234: Action=Copy.ai Reward=0.0 Done=False
+Step 235: Action=Looka Reward=0.0 Done=False
+Step 236: Action=GitLab CI/CD Reward=0.0 Done=False
+Step 237: Action=Tenor Reward=0.0 Done=False
+Step 238: Action=chat_with_workspace Reward=0.0 Done=False
+Step 239: Action=bramework Reward=0.0 Done=False
+Step 240: Action=JPL NASA Reward=0.0 Done=False
+Step 241: Action=Tableau Reward=0.0 Done=False
+Step 242: Action=BreezoMeter Reward=0.0 Done=False
+Step 243: Action=GitHub Copilot Reward=0.0 Done=False
+Step 244: Action=Starfall Reward=0.0 Done=False
+Step 245: Action=AI2sql Reward=0.0 Done=False
+Step 246: Action=Sudoku Reward=0.0 Done=False
+Step 247: Action=MotorMouth Reward=0.0 Done=False
+Step 248: Action=WolframAlpha Reward=0.0 Done=False
+Step 249: Action=OneNote Reward=0.0 Done=False
+Step 250: Action=Tray.io Reward=0.0 Done=False
+Step 251: Action=uShip Reward=0.0 Done=False
+Step 252: Action=chatspot Reward=0.0 Done=False
+Step 253: Action=GTmetrix Reward=0.0 Done=False
+Step 254: Action=Habitica Reward=0.0 Done=False
+Step 255: Action=PayPal Reward=0.0 Done=False
+Step 256: Action=Jotform Reward=0.0 Done=False
+Step 257: Action=Brandwatch Reward=0.0 Done=False
+Step 258: Action=smarttsicketsai Reward=0.0 Done=False
+Step 259: Action=Broadway Reward=0.0 Done=False
+Step 260: Action=ProductComparison Reward=0.0 Done=False
+Step 261: Action=Brandmark Reward=0.0 Done=False
+Step 262: Action=Blockcypher Reward=0.0 Done=False
+Step 263: Action=ai_council Reward=0.0 Done=False
+Step 264: Action=edX Reward=0.0 Done=False
+Step 265: Action=ph_ai_news_query Reward=0.0 Done=False
+Step 266: Action=Gear Patrol Reward=0.0 Done=False
+Step 267: Action=Brandmark Reward=0.0 Done=False
+Step 268: Action=hacktrack Reward=0.0 Done=False
+Step 269: Action=Chess Reward=0.0 Done=False
+Step 270: Action=Grammarly Reward=0.0 Done=False
+Step 271: Action=Canva Reward=0.0 Done=False
+Step 272: Action=CamelCamelCamel Reward=0.0 Done=False
+Step 273: Action=Loadsmart Reward=0.0 Done=False
+Step 274: Action=Talkface_IELTS_Prep Reward=0.0 Done=False
+Step 275: Action=DuckDuckGo Reward=0.0 Done=False
+Step 276: Action=MapTool Reward=0.0 Done=False
+Step 277: Action=Backblaze Reward=0.0 Done=False
+Step 278: Action=Chess.com Reward=0.0 Done=False
+Step 279: Action=TodayTix Reward=0.0 Done=False
+Step 280: Action=what_to_watch Reward=0.0 Done=False
+Step 281: Action=locator Reward=0.0 Done=False
+Step 282: Action=PuTTY Reward=0.0 Done=False
+Step 283: Action=MixerBox_WebSearchG_web_search Reward=0.0 Done=False
+Step 284: Action=IQAir Reward=0.0 Done=False
+Step 285: Action=ProductComparison Reward=0.0 Done=False
+Step 286: Action=Lumen5 Reward=0.0 Done=False
+Step 287: Action=MotorMouth Reward=0.0 Done=False
+Step 288: Action=Surfline Reward=0.0 Done=False
+Step 289: Action=Etherscan Reward=0.0 Done=False
+Step 290: Action=Pingdom Reward=0.0 Done=False
+Step 291: Action=WordCounter.net Reward=0.0 Done=False
+Step 292: Action=PuTTY Reward=0.0 Done=False
+Step 293: Action=Carrot Weather Reward=0.0 Done=False
+Step 294: Action=Adobe Photoshop Reward=0.0 Done=False
+Step 295: Action=WordPress Reward=0.0 Done=False
+Step 296: Action=webhooks Reward=0.0 Done=False
+Step 297: Action=Credit Karma Reward=0.0 Done=False
+Step 298: Action=ChargePoint Reward=0.0 Done=False
+Step 299: Action=rephrase Reward=0.0 Done=False
+Step 300: Action=JPL NASA Reward=0.0 Done=False
+Step 301: Action=fundsdbsearch Reward=0.0 Done=False
+Step 302: Action=MotorMouth Reward=0.0 Done=False
+Step 303: Action=Etsy Reward=0.0 Done=False
+Step 304: Action=Salesforce Reward=0.0 Done=False
+Step 305: Action=Canva Reward=0.0 Done=False
+Step 306: Action=Make (formerly Integromat) Reward=0.0 Done=False
+Step 307: Action=Skyscanner Reward=0.0 Done=False
+Step 308: Action=Odoo Reward=0.0 Done=False
+Step 309: Action=Gear Patrol Reward=0.0 Done=False
+Step 310: Action=Uncommon Goods Reward=0.0 Done=False
+Step 311: Action=social_media_muse Reward=0.0 Done=False
+Step 312: Action=Pixton Reward=0.0 Done=False
+Step 313: Action=ndricks_sports_api Reward=0.0 Done=False
+Step 314: Action=Adobe Acrobat Reward=0.0 Done=False
+Step 315: Action=tira Reward=0.0 Done=False
+Step 316: Action=PictureThis Reward=0.0 Done=False
+Step 317: Action=Cronometer Reward=0.0 Done=False
+Step 318: Action=ExchangeTool Reward=0.0 Done=False
+Step 319: Action=Morningstar Reward=0.0 Done=False
+Step 320: Action=Dogpile Reward=0.0 Done=False
+Step 321: Action=DataRetrievalTool Reward=0.0 Done=False
+Step 322: Action=timeport Reward=0.0 Done=False
+Step 323: Action=GameTool Reward=0.0 Done=False
+Step 324: Action=NASATool Reward=0.0 Done=False
+Step 325: Action=Notta Reward=1.0 Done=False
+Step 326: Action=IndoorPlants Reward=0.0 Done=False
+Step 327: Action=SASpeedCameras Reward=0.0 Done=False
+Step 328: Action=IMDb Reward=0.0 Done=False
+Step 329: Action=Morningstar Reward=0.0 Done=False
+Step 330: Action=form Reward=0.0 Done=False
+Step 331: Action=clinical_trial_radar Reward=0.0 Done=False
+Step 332: Action=MemoryTool Reward=0.0 Done=False
+Step 333: Action=Bloomberg Reward=0.0 Done=False
+Step 334: Action=Connected Papers Reward=0.0 Done=False
+Step 335: Action=Tray.io Reward=0.0 Done=False
+Step 336: Action=Nessus Reward=0.0 Done=False
+Step 337: Action=Biddy Tarot Reward=0.0 Done=False
+Step 338: Action=AbleStyle Reward=0.0 Done=False
+Step 339: Action=ResearchRabbit Reward=0.0 Done=False
+Step 340: Action=Epic Games Reward=0.0 Done=False
+Step 341: Action=MobaXterm Reward=0.0 Done=False
+Step 342: Action=Git Reward=0.0 Done=False
+Step 343: Action=Upwork Reward=0.0 Done=False
+Step 344: Action=themeparkhipster Reward=0.0 Done=False
+Step 345: Action=TripTool Reward=0.0 Done=False
+Step 346: Action=web_requests Reward=0.0 Done=False
+Step 347: Action=Adobe Photoshop Reward=0.0 Done=False
+Step 348: Action=DietTool Reward=0.0 Done=False
+Step 349: Action=CharityTool Reward=0.0 Done=False
+Step 350: Action=Foursquare Reward=0.0 Done=False
+Step 351: Action=speak Reward=0.0 Done=False
+Step 352: Action=AusPetrolPrices Reward=0.0 Done=False
+Step 353: Action=Skyscanner Reward=0.0 Done=False
+Step 354: Action=timemachine Reward=0.0 Done=False
+Step 355: Action=Food Network Reward=0.0 Done=False
+Step 356: Action=Trustpilot Reward=0.0 Done=False
+Step 357: Action=ElevenLabs Reward=0.0 Done=False
+Step 358: Action=Bear Reward=0.0 Done=False
+Step 359: Action=PolishTool Reward=0.0 Done=False
+Step 360: Action=ShopSavvy Reward=0.0 Done=False
+Step 361: Action=Backblaze Reward=0.0 Done=False
+Step 362: Action=SearXNG Reward=0.0 Done=False
+Step 363: Action=IndoorPlants Reward=0.0 Done=False
+Step 364: Action=Medidata Rave Reward=0.0 Done=False
+Step 365: Action=CribbageScorer Reward=0.0 Done=False
+Step 366: Action=SciSpace Reward=0.0 Done=False
+Step 367: Action=video_highlight Reward=0.0 Done=False
+Step 368: Action=Tenor Reward=0.0 Done=False
+Step 369: Action=GTmetrix Reward=0.0 Done=False
+Step 370: Action=Looka Reward=0.0 Done=False
+Step 371: Action=GitHub Reward=0.0 Done=False
+Step 372: Action=Google Images Reward=0.0 Done=False
+Step 373: Action=The Planetary Society Reward=0.0 Done=False
+Step 374: Action=Apollo.io Reward=0.0 Done=False
+Step 375: Action=Google Maps Reward=0.0 Done=False
+Step 376: Action=ResearchHelper Reward=0.0 Done=False
+Step 377: Action=The Pattern Reward=0.0 Done=False
+Step 378: Action=MediaTool Reward=0.0 Done=False
+Step 379: Action=Murf AI Reward=0.0 Done=False
+Step 380: Action=GiftTool Reward=0.0 Done=False
+Step 381: Action=Daybook Reward=0.0 Done=False
+Step 382: Action=Stellarium Reward=0.0 Done=False
+Step 383: Action=BBC News Reward=0.0 Done=False
+Step 384: Action=Zety Reward=0.0 Done=False
+Step 385: Action=Kapwing Reward=0.0 Done=False
+Step 386: Action=Hudl Reward=0.0 Done=False
+Step 387: Action=WriteReader Reward=0.0 Done=False
+Step 388: Action=Salesloft Reward=0.0 Done=False
+Step 389: Action=PlugShare Reward=0.0 Done=False
+Step 390: Action=LastQuake Reward=0.0 Done=False
+Step 391: Action=Kayak Reward=0.0 Done=False
+Step 392: Action=Apify Reward=0.0 Done=False
+Step 393: Action=Homer Reward=0.0 Done=False
+Step 394: Action=Synthesia Reward=0.0 Done=False
+Step 395: Action=Rebrandly Reward=0.0 Done=False
+Step 396: Action=Nike Training Club Reward=0.0 Done=False
+Step 397: Action=Capital One Shopping Reward=0.0 Done=False
+Step 398: Action=Nike Training Club Reward=0.0 Done=False
+Step 399: Action=Sanctuary Reward=0.0 Done=False
+Step 400: Action=hadith Reward=0.0 Done=False
+Step 401: Action=TKTS Reward=0.0 Done=False
+Step 402: Action=reflect_notes Reward=0.0 Done=False
+Step 403: Action=ResearchFinder Reward=0.0 Done=False
+Step 404: Action=Apple News Reward=0.0 Done=False
+Step 405: Action=Dogpile Reward=0.0 Done=False
+Step 406: Action=MixerBox_WebSearchG_web_search Reward=0.0 Done=False
+Step 407: Action=Google Lens Reward=0.0 Done=False
+Step 408: Action=MotorMouth Reward=0.0 Done=False
+Step 409: Action=BBC News Reward=0.0 Done=False
+Step 410: Action=DeepL Reward=0.0 Done=False
+Step 411: Action=Typeform Reward=0.0 Done=False
+Step 412: Action=SEOTool Reward=0.0 Done=False
+Step 413: Action=ProductComparison Reward=0.0 Done=False
+Step 414: Action=USGS Earthquake App Reward=0.0 Done=False
+Step 415: Action=hdbcarpark Reward=0.0 Done=False
+Step 416: Action=Dogpile Reward=0.0 Done=False
+Step 417: Action=StoryJumper Reward=0.0 Done=False
+Step 418: Action=Habitica Reward=0.0 Done=False
+Step 419: Action=Microsoft Excel Reward=0.0 Done=False
+Step 420: Action=Biddy Tarot Reward=0.0 Done=False
+Step 421: Action=USGS Earthquake App Reward=0.0 Done=False
+Step 422: Action=ABCmouse Reward=0.0 Done=False
+Step 423: Action=kraftful Reward=0.0 Done=False
+Step 424: Action=sakenowa Reward=0.0 Done=False
+Step 425: Action=HousePurchasingTool Reward=0.0 Done=False
+Step 426: Action=Shiply Reward=0.0 Done=False
+Step 427: Action=TurboTax Reward=0.0 Done=False
+Step 428: Action=Capital One Shopping Reward=0.0 Done=False
+Step 429: Action=RepoTool Reward=0.0 Done=False
+Step 430: Action=ProductComparison Reward=0.0 Done=False
+Step 431: Action=EarthquakeTool Reward=0.0 Done=False
+Step 432: Action=Pingdom Reward=0.0 Done=False
+Step 433: Action=hackit_web_scanner Reward=0.0 Done=False
+Step 434: Action=Postman Reward=0.0 Done=False
+Step 435: Action=Terraform Reward=0.0 Done=False
+Step 436: Action=Reading Eggs Reward=0.0 Done=False
+Step 437: Action=TalentOrg Reward=0.0 Done=False
+Step 438: Action=Paw Reward=0.0 Done=False
+Step 439: Action=tira Reward=0.0 Done=False
+Step 440: Action=ElevenLabs Reward=0.0 Done=False
+Step 441: Action=Hemingway Editor Reward=0.0 Done=False
+Step 442: Action=TomTom Reward=0.0 Done=False
+Step 443: Action=Starfall Reward=0.0 Done=False
+Step 444: Action=Google Assistant Reward=0.0 Done=False
+Step 445: Action=DONE Reward=0.8 Done=True
 
-Step 0 → Choosing tool index 0 (Arxiv)
-Reward: 1.0 Done: True
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-##### Testing Multi-Step Mode #####
-
-=== New Episode ===
-Prompt: Find academic papers on reinforcement learning.
-Available Tools: ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']
-
-Step 0 → Choosing tool index 0 (Arxiv)
-Reward: 1.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 1 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 2 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 3 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 4 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 5 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 6 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 7 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 8 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 9 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 10 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 11 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 12 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 13 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 14 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 15 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 16 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 17 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 18 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
-
-Step 19 → Choosing tool index 0 (Arxiv)
-Reward: 0.0 Done: False
-Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+=== Testing environment with editeddataset.csv ===
+Loaded dataset with 20614 rows, vocab size=582
+Ground truth tools: ['Summarize.tech', 'Notta', 'Eightify']
+Initial Observation: {'prompt': 'I would like a comprehensive explanation of the underlying concepts and principles discussed in this specific YouTube video on machine learning.', 'available_tools': ['16Personalities', 'ABCmouse', 'AI2sql', 'AbleStyle', 'AccuWeather', 'Acorns', 'Acuity Scheduling', 'Adalo', 'Adobe Acrobat', 'Adobe Photoshop', 'Adobe Scan', 'Agones', 'Ahrefs', 'AirVisual', 'Al-Islam.org', 'Alexa', 'Algorithma', 'Allrecipes', 'Amazon', 'Amazon Gift Finder', 'Anki', 'Ansible', 'Apartments.com', 'ApexMap', 'Apify', 'Apollo.io', 'Apple Maps', 'Apple Music', 'Apple News', 'Apple Podcasts', 'AppyPieAIAppBuilder', 'Archive.today', 'ArtCollection', 'Artland', 'Artsy', 'Astro.com', 'AusPetrolPrices', 'AusSurfReport', 'AutoInfra1', 'BBC News', 'Backblaze', 'Bannerbear', 'Bear', 'Beautiful Soup', 'Betterment', 'Biddy Tarot', 'Bing', 'Bing Images', 'Bitbucket', 'Bitly', 'Blockchair', 'Blockcypher', 'Bloomberg', 'Bloomberg Terminal', 'Bohita', 'BookBub', 'BookTool', 'Brandfolder', 'Brandmark', 'Brandwatch', 'BreezoMeter', 'British Council IELTS', 'Broadway', 'Broadway.com', 'Bubble', 'Burp Suite', 'C3_Glide', 'CTCP', 'Calendly', 'CamelCamelCamel', 'Canva', 'Capital One Shopping', 'Capterra', 'CarYardBard', 'Carrot Weather', 'ChargePoint', 'Charity Navigator', 'CharityTool', 'ChartTool', 'ChatOCR', 'Checkers', 'Checkersland', 'Chess', 'Chess.com', 'Cisco Umbrella', 'ClinicalTrials.gov', 'Cloudflare', 'Clutch', 'Co-Star', 'Coastalwatch', 'Coaster-Net', 'Code.org', 'CodeWhisperer', 'CompanyInfoTool', 'Connected Papers', 'Copy.ai', 'CountWordsFree.com', 'CourseTool', 'Coursera', 'Co\x96Star', 'CranePumpsManuals', 'Creaticode_Extension_of_MIT_Scratch', 'Credit Karma', 'Credit Sesame', 'CreditYelp', 'CribbageScorer', 'Cronometer', 'Crunchbase', 'DALL-E 2', 'DataRetrievalTool', 'Daybook', 'DeepL', 'Descript', 'Dev.to', 'DietTool', 'Discord', 'Discount', 'Docker', 'Dogpile', 'Dr_Thoths_Tarot', 'Draft Fantasy Football', 'Dropbox', 'DuckDuckGo', 'Duolingo', 'ESA', 'ESPN', 'ESPN API', 'EarthquakeTool', 'Eightify', 'Electrify America', 'ElevenLabs', 'Elicit', 'EmailByNylas', 'Epic Games', 'Etherscan', 'Etsy', 'Evernote', 'ExchangeTool', 'Expedia', 'Experian', 'FPL Manager', 'Fabulous', 'Fastcase', 'Feedly', 'Fender Play', 'Figlet', 'FinanceTool', 'Finviz', 'Florish', 'Flutter', "Fodor's", 'Food Network', 'Foursquare', 'Foxit PDF Editor', 'FuelWatch', 'G2', 'GIMP', 'GOG', 'GTmetrix', 'GameTool', 'GasBuddy', 'Gear Patrol', 'GifApi', 'GiftTool', 'Giphy', 'Git', 'GitHub', 'GitHub Actions', 'GitHub Copilot', 'GitLab', 'GitLab CI/CD', 'GiveWell', 'Glassdoor', 'Glowing', 'Golden Thread Tarot', 'Goodreads', 'Google', 'Google Analytics', 'Google Assistant', 'Google Data Studio', 'Google Forms', 'Google Images', 'Google Lens', 'Google Maps', 'Google News', 'Google Scholar', 'Google Sheets', 'Google Shopping', 'Google Translate', 'Google_Ads_Shopping_Microsoft_Ads_pay_per_click', 'Grammarly', 'GuideStar', 'GuitarTuna', 'H&R Block', 'Habitica', 'Hadith Collection', 'Hemingway Editor', 'Homer', 'Honey', 'Hootsuite', 'Horoscopes_by_Inner_Self', 'HousePurchasingTool', 'HouseRentingTool', 'HubSpot', 'Hudl', 'Hypebeast', 'IELTS.org', 'IFTTT', 'IMDb', 'IQAir', 'Idealo', 'ImageSearch', 'Imgflip', 'InVideo', 'Indeed', 'IndoorPlants', 'Insomnia', 'Interact', 'JPL NASA', 'Jasper', 'Jenkins', 'JobTool', 'Jotform', 'Jupyter Notebooks', 'JustWatch', 'KakaoMap', 'KalendarAI', 'Kapwing', 'Kayak', 'Kickresume', 'Kubernetes', 'Labyrinthos', 'LarkBaseImporter', 'LastQuake', 'Later', 'LawTool', 'LeadIQ', 'LexisNexis', 'Lichess', 'LinkedIn', 'Loadsmart', 'Lonely Planet', 'Looka', 'Lose It!', 'Lumen5', 'M1 Finance', 'Magnetis', 'Magoosh IELTS', 'Mailgun', 'Make', 'Make (formerly Integromat)', 'Man_of_Many', 'MapTool', 'MediaModifyTool', 'MediaTool', 'Medidata Rave', 'MemeTool', 'MemoryTool', 'Memrise', 'Mention', 'Microsoft Excel', 'Microsoft Office Lens', 'Microsoft Teams', 'Microsoft Word', 'Midjourney', 'Mint', 'MixerBox_Translate_AI_language_tutor', 'MixerBox_WebSearchG_web_search', 'MobaXterm', 'MonkeyLearn', 'Morningstar', 'MotorMouth', 'Moz', 'Murf AI', 'MusicTool', 'MyFitnessPal', 'MyShake', 'MyWritingCompanion', 'NASATool', 'NFL Game Pass', 'NLQ.ai', 'NaturalReader', 'Naver Maps', 'Nessus', 'NewsTool', 'Nike Training Club', 'NotesTool', 'Notion', 'Notta', 'Now', 'Octoparse', 'Odoo', 'OneNote', 'OpenShift', 'OpenTable', 'OpenVAS', 'Oracle', 'Outreach', 'PDF&URLTool', 'PDF_Exporter', 'PDFelement', 'Paraphraser.io', 'Paw', 'PayPal', 'Personal Capital', 'Pexels', 'PictureThis', 'Pingdom', 'PitchBook', 'Pixton', 'Planfit', 'PlantSnap', 'PlugShare', 'Pocket Casts', 'PodcastTool', 'PolishTool', 'Postman', 'Postmark', 'Power BI', 'PriceGrabber', 'ProWritingAid', 'ProductComparison', 'ProductSearch', 'PuTTY', 'Pulumi', 'Puzzle_Constructor', 'QR Code Generator', 'QR Code Monkey', 'QuillBot', 'QuiverQuantitative', 'Quizlet', 'Rakuten', 'React Native', 'ReadSpeaker', 'Reading Eggs', 'Realtor.com', 'Rebrandly', 'Redfin', 'RepoTool', 'ResearchFinder', 'ResearchHelper', 'ResearchRabbit', 'Resemble.ai', 'RestaurantBookingTool', 'ResumeTool', 'Resy', 'Review', 'RoboAd', 'Rotten Tomatoes', 'Rytr', 'SAP', 'SASpeedCameras', 'SEMrush', 'SEOTool', 'SQLizer', 'SSH', 'Saatchi Art', 'Salesforce', 'Salesloft', 'Sanctuary', 'SavvyCal', 'SceneXplain', 'SciSpace', 'Scout Gaming', 'Scrapy', 'Scratch', 'SearXNG', 'SeekWell', 'Selenium', 'Semantic Scholar', 'SendGrid', 'Seoul Subway app', 'Shiply', 'ShopSavvy', 'ShoppingAssistant', 'SigFig', 'Siri', 'SkySafari', 'Skyscanner', 'Slack', 'Sportradar', 'Spotify', 'Sprout Social', 'SpyFu', 'Squarespace', 'Stable Diffusion', 'Stack Overflow', 'Star Walk 2', 'Starfall', 'Startpage', 'Steam', 'Stellarium', 'Stencil', 'StoryGraph', 'StoryJumper', 'Strava', 'Streaks', 'StrologyTool', 'Substack_IQ', 'Sudoku', 'Summarize.tech', 'SummarizeAnything_pr', 'Sunnah.com', 'SuperchargeMyEV', 'Surfer SEO', 'Surfline', 'SurveyMonkey', 'Swellnet', 'Synthesia', 'TKTS', 'Tableau', 'Tabnine', 'TalentOrg', 'Talkface_IELTS_Prep', 'TaxAct', 'Tax_Calculator', 'Tenor', 'Termius', 'Terraform', 'The Economist', 'The Guardian', 'The Pattern', 'The Planetary Society', 'The Sports API', 'The Weather Channel', 'Thumbtack', 'Thunkable', 'TicTacToe', 'TinyURL', 'TodayTix', 'TomTom', 'TouringPlans', 'TradingView', 'Tray.io', 'TrialSpark', 'TripAdviceTool', 'TripAdvisor', 'TripTool', 'Truity', 'Trulia', 'Trustpilot', 'TurboTax', 'Tynker', 'TypeFinder', 'Typeform', 'URLTool', 'USGS Earthquake App', 'Udemy', 'Uncommon Goods', 'Uncrate', 'Undercover Tourist', 'Unitag', 'Upwork', 'VideoSummarizeTool', 'Visla', 'Voyant Tools', 'Wayback Machine', 'Waze', 'Wealthfront', 'WeatherTool', 'WebRewind', 'WebsiteTool', 'Westlaw', 'Wise', 'Wix', 'WolframAlpha', 'WordArt', 'WordCloud', 'WordCounter.net', 'WordPress', 'Wordtune', 'WriteReader', 'XE', 'Xamarin', 'YNAB', 'Yahoo Finance', 'Yelp', 'YouTube Music', 'Yousician', 'Yummly', 'Zapier', 'Zety', 'Zillow', 'Zoho CRM', 'ZoomInfo', 'abc_to_audio', 'ad4mat', 'aiAgents', 'ai_council', 'airqualityforeast', 'assetOvi', 'blockatlas', 'bramework', 'brandfetch', 'buildbetter', 'calculator', 'champdex', 'chat_with_workspace', 'chatspot', 'clearbit_integration', 'clinical_trial_radar', 'clinq', 'cloudflare_radar', 'competitorppcads', 'copilot', 'copywriter', 'crafty_clues', 'create_qr_code', 'dart', 'decision_journal', 'deployscript', 'dev', 'diceroller', 'dover_outreach', 'edX', 'exportchat', 'find_agency', 'form', 'fundsdbsearch', 'hackit_web_scanner', 'hacktrack', 'hadith', 'haulingbuddies', 'hdbcarpark', 'heygen', 'hubbubworld_hubbub_1', 'iSpionage', 'internetSearch', 'jini', 'keyplays_football', 'keywordexplorer', 'korea_subway', 'kraftful', 'lichess.org', 'local', 'locator', 'lsongai', 'magi_codex', 'mbti', 'metaphor_search_api', 'mini_habits', 'ndricks_sports_api', 'noteable', 'ph_ai_news_query', 'photorealistic', 'placid', 'portfoliopilot', 'qreator', 'recipe_retrieval', 'reflect_notes', 'rephrase', 'sakenowa', 'search', 'seoanalysis', 'shimmer_daily', 'smarttsicketsai', 'social_media_muse', 'socialsearch', 'speak', 'speechki_tts_plugin', 'stellarexplorer', 'storybird_stories', 'tailor_erp', 'talkfpl', 'themeparkhipster', 'timemachine', 'timeport', 'tira', 'total_query_meta_search_engine', 'uShip', 'uberchord', 'uk_politics', 'universal', 'video_highlight', 'web_requests', 'web_scraper', 'webhooks', 'website_performance_insights', 'what_to_watch', 'word_counter', 'word_sneak', 'wpinteract', 'DONE'], 'selected_tools': []}
+Step 1: Action=Apollo.io Reward=0.0 Done=True

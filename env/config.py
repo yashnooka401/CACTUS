@@ -8,8 +8,14 @@ Centralizes dataset paths, environment parameters, and training hyperparameters.
 import os
 
 # === PATHS ===
-DATASET_PATH = "data/Raw/all_clean_data.csv"
-LOGS_DIR = "utils/logs"
+# TODO: later replace with Remote URL or relative paths
+RAW_DATASET = '/Users/pranith/Code/CACTUS/data/Raw/all_clean_data.csv' # Directory for raw data files
+PROCESSED_DATASET = '/Users/pranith/Code/CACTUS/data/Processed/editeddataset.csv'  # Directory for processed data files
+
+
+LOGS_DIR = "../logs"            # Directory for logs and checkpoints
+CHECKPOINT_DIR = os.path.join(LOGS_DIR, "checkpoints")
+os.makedirs(CHECKPOINT_DIR, exist_ok=True)
 
 # === ENVIRONMENT ===
 MAX_STEPS = 1        # For single-shot predictions (change for multi-step)
