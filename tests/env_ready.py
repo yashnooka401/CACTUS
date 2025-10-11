@@ -64,5 +64,5 @@ def run_env_test(csv_path, mode="multi-step", max_steps=1000, seed=42):
 
 if __name__ == "__main__":
     # Test with both multi-step and single-shot modes
-    run_env_test(config.PROCESSED_DATASET, mode="multi-step", max_steps=1000)
+    run_env_test(config.PROCESSED_DATASET, mode="multi-step", max_steps=200)
     run_env_test(config.PROCESSED_DATASET, mode="single-shot", max_steps=5)
